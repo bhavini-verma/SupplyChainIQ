@@ -277,12 +277,30 @@ All tests should return expected results (0 orphans, 0 integrity violations).
 
 ## Evidence & Screenshots
 
-Screenshots of MySQL Workbench execution are in [`evidence/screenshots/`](evidence/screenshots/).
+All screenshots are genuine MySQL Workbench captures from the live `supply_chain` database.
 
-To capture your own:
-1. Run any query in Workbench
-2. Right-click the results grid → **Export** → **Export to CSV** for data
-3. Use **File → Save Screenshot** or OS snipping tool for the grid view
+### ER Diagram
+![ER Diagram](diagrams/er_diagram.png)
+
+### Product Profitability — Query #1
+*Revenue, COGS, gross profit and margin per product across all SHIPPED orders*
+
+![Product Profitability](evidence/screenshots/02_product_profitability.png)
+
+### Supplier Ranking — Query #3 (Window Function: RANK())
+*Suppliers ranked by on-time delivery percentage using `RANK() OVER()`*
+
+![Supplier Ranking](evidence/screenshots/04_supplier_ranking.png)
+
+### Automated Reorder Alerts — Trigger Evidence
+*Rows auto-inserted by `trg_inventory_low_stock` when stock crossed below reorder threshold*
+
+![Reorder Alerts](evidence/screenshots/03_reorder_alerts.png)
+
+### Warehouse Inventory Status View
+*`warehouse_inventory_status` view showing products currently in REORDER state*
+
+![Warehouse Inventory Status](evidence/screenshots/05_reorder_status_view.png)
 
 ---
 
