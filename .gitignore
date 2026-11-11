@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# MySQL Workbench
+*.mwb.bak
+*.mwb~
+
+# Exported files (keep organised ones, ignore temp exports)
+*.csv
+!evidence/query_results/*.csv
+
+# Log files
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Credentials — NEVER commit passwords
+my.cnf
+.env
+
